@@ -1,0 +1,9 @@
+SELECT 
+    product_category,
+    customer_segment,
+    SUM(sales) AS total_sales,
+    SUM(profit) AS total_profit,
+    SUM(quantity) AS total_quantity
+FROM orders
+GROUP BY product_category, customer_segment
+ORDER BY total_sales DESC;

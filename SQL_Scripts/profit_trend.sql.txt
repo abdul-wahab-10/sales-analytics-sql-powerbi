@@ -1,0 +1,6 @@
+SELECT 
+    DATE_TRUNC('month', order_date) AS month,
+    SUM(profit) AS total_profit
+FROM orders
+GROUP BY DATE_TRUNC('month', order_date)
+ORDER BY month;
